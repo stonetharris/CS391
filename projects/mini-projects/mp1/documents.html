@@ -2,9 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Projects</title>
+
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #5cdb71;
+        }
+
+        .navBar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            overflow: hidden;
+            background-color: #4CAF50;
+        }
+        .navBar li {
+            float: left;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 750px) {
+            .navBar {
+                position: fixed;
+                width: 30%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+            }
+            .navBar li {
+                width: auto;
+            }
+        }
+
+        .navBar a{
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navBar:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .navBar a:hover {
+            background-color: #3e8e41;
+        }
+        @media screen and (min-width: 750px){
+            .navBar{
+                position: fixed;
+                width: 30%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+            }
+            .navBar li{
+                width: auto;
+                float: none;
+            }
+            .navBar a{
+                text-align: left;
+            }
+        }
+        .main {
+            margin-left: 30%;
+            text-align: left;
+            padding: 30px;
+            background-color: #5cdb71;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .header {
+            background-color: #0a660e;
+            padding-left: 30%;
+        }
+
+        @media screen and (min-width: 750px) {
+            .header {
+                position: relative;
+                width: 70%;
+                margin-left: 30%;
+                box-sizing: border-box;
+            }
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0a660e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        img {
+            margin-right: 20px;
+            flex-shrink: 0;
+            width: 150px;
+            height: auto;
+        }
+
+        .main p {
+            flex-grow: 1;
+        }
+
+        @media screen and (max-width: 750px) {
+            .main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+        button:last-child {
+            margin-right: 0;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+<div class="header">
+    <header>
+        <h1>Documents</h1>
+        <!--        <p>My Online Resume</p>-->
+    </header>
+</div>
+
+<nav>
+    <ul class="navBar">
+        <li><a href="sth-resume.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="documents.html">Documents</a></li>
+    </ul>
+</nav>
+
+<div class="main">
+    <p>This is an in-browser calculator:</p>
+
+    <label for="num1"> First Number </label><input id="num1">
+    <label for="num2"> Second Number </label><input id="num2">
+    <button onclick="calculator('+')">+</button>
+    <button onclick="calculator('-')">-</button>
+    <button onclick="calculator('/')">/</button>
+    <button onclick="calculator('*')">*</button>
+    <button onclick="calculator('**')">**</button>
+
+    <h2 id="result"></h2>
+
+</div>
+
+<script src="calc.js"></script>
 
 </body>
 </html>
+
+

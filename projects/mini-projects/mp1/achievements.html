@@ -2,9 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Stone Harris | Achievements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #5cdb71;
+        }
+
+        .navBar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            overflow: hidden;
+            background-color: #4CAF50;
+        }
+        .navBar li {
+            float: left;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 750px) {
+            .navBar {
+                position: fixed;
+                width: 30%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+            }
+            .navBar li {
+                width: auto;
+            }
+        }
+
+        .navBar a{
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navBar:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .navBar a:hover {
+            background-color: #3e8e41;
+        }
+        @media screen and (min-width: 750px){
+            .navBar{
+                position: fixed;
+                width: 30%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+            }
+            .navBar li{
+                width: auto;
+                float: none;
+            }
+            .navBar a{
+                text-align: left;
+            }
+
+
+        }
+        .main{
+            margin-left: 30%;
+            text-align: center;
+            align-content: center;
+            padding-top: 30px;
+            background-color: #5cdb71;
+        }
+        .header {
+            background-color: #0a660e;
+            padding-left: 30%; /* Add padding on the left equal to the navbar width */
+        }
+
+        @media screen and (min-width: 750px) {
+            .header {
+                position: relative;
+                width: 70%;
+                margin-left: 30%;
+                box-sizing: border-box;
+            }
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0a660e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
+<div class="header">
+    <header>
+        <h1>Achievements</h1>
+        <!--        <p>My Online Resume</p>-->
+    </header>
+</div>
+
+<nav>
+    <ul class="navBar">
+        <li><a href="sth-resume.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="documents.html">Documents</a></li>
+    </ul>
+</nav>
+
+<div class="main">
+    <main>
+        <section>
+            <h2>Boston University | Boston, MA</h2>
+            <p>College of General Studies Dean's List</p>
+        </section>
+        <section>
+            <h2>Wayland High School | Wayland, MA</h2>
+            <p>Honor Roll Student</p>
+        </section>
+    </main>
+</div>
+<footer>
+    <p>
+        &copy; All Rights Reserved by Stone Harris - <a href="credits.html">Credits</a>
+    </p>
+</footer>
 
 </body>
 </html>

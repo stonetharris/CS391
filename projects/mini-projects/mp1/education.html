@@ -3,22 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <title>Stone Harris | Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #5cdb71;
+        }
+
+        .navBar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            overflow: hidden;
+            background-color: #4CAF50;
+        }
+        .navBar li {
+            float: left;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 750px) {
+            .navBar {
+                position: fixed;
+                width: 30%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+            }
+            .navBar li {
+                width: auto;
+            }
+        }
+
+        .navBar a{
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navBar:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .navBar a:hover {
+            background-color: #3e8e41;
+        }
+        @media screen and (min-width: 750px){
+            .navBar{
+                position: fixed;
+                width: 30%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+            }
+            .navBar li{
+                width: auto;
+                float: none;
+            }
+            .navBar a{
+                text-align: left;
+            }
+
+
+        }
+        .main {
+            margin-left: 30%;
+            text-align: left; /* Align text to the left for readability */
+            padding: 30px; /* Add padding to create space around the content */
+            background-color: #5cdb71;
+        }
+
+        /* Optional: Customize list styles */
+        .main ul {
+            padding-left: 20px; /* Adjust based on preference */
+        }
+
+        .main li {
+            margin-bottom: 10px; /* Space out list items for readability */
+        }
+
+        /* Handle nested lists specifically */
+        .main ul ul {
+            list-style-type: circle; /* Different style for nested lists */
+            padding-left: 30px; /* Additional indent for nested lists */
+        }
+        .header {
+            background-color: #0a660e;
+            padding-left: 30%; /* Add padding on the left equal to the navbar width */
+        }
+
+        @media screen and (min-width: 750px) {
+            .header {
+                position: relative; /* Ensures the header is positioned correctly */
+                width: 70%; /* Adjusts the width so it doesn't extend under the navbar */
+                margin-left: 30%; /* Pushes the header to start where the navbar ends */
+                box-sizing: border-box; /* Ensures padding is included in the width */
+            }
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0a660e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
-<body style = "background-color: #5cdb71">
-<header>
-    <h1>Education</h1>
-</header>
+<body>
+<div class="header">
+    <header>
+        <h1>Education</h1>
+        <!--        <p>My Online Resume</p>-->
+    </header>
+</div>
+
 <nav>
-    <ul style = "display:inline">
-        <li style = "display: inline; margin-right: 10px;"><a href="sth-resume.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Home</a></li>
-        <li style = "display: inline; margin-right: 10px;"><a href="education.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Education</a></li>
-        <li style = "display: inline; margin-right: 10px;"><a href="employment.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Employment</a></li>
-        <li style = "display: inline; margin-right: 10px;"><a href="achievements.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Achievements</a></li>
-        <li style = "display: inline; margin-right: 10px;"><a href="references.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">References</a></li>
-        <li style = "display: inline; margin-right: 10px;"><a href="documents.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Documents</a></li>
+    <ul class="navBar">
+        <li><a href="sth-resume.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="documents.html">Documents</a></li>
     </ul>
 </nav>
-    <main style="padding: 10px 20px; background-color: #4CAF50; margin-top: 20px; border-radius: 5px;">
+
+<div class="main">
+    <main>
         <section>
             <h2>Boston University | Boston, MA</h2>
             <p>Expected May 2024</p>
@@ -45,10 +167,14 @@
                 </ul>
             </ul>
         </section>
+
     </main>
-    <footer>
+</div>
+<footer>
+    <p>
         &copy; All Rights Reserved by Stone Harris - <a href="credits.html">Credits</a>
-    </footer>
+    </p>
+</footer>
 
 </body>
 </html>

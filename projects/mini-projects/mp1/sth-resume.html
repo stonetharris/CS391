@@ -1,37 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" content = "An Online Resume belonging to Stone Harris">
+    <meta charset="UTF-8">
     <title>Stone Harris | Online Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #5cdb71;
+        }
+
+        .navBar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            overflow: hidden;
+            background-color: #4CAF50;
+        }
+        .navBar li {
+            float: left;
+            width: 100%;
+        }
+
+        @media screen and (min-width: 750px) {
+            .navBar {
+                position: fixed;
+                width: 30%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+            }
+            .navBar li {
+                width: auto;
+            }
+        }
+
+        .navBar a{
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navBar:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .navBar a:hover {
+            background-color: #3e8e41;
+        }
+        @media screen and (min-width: 750px){
+            .navBar{
+                position: fixed;
+                width: 30%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+            }
+            .navBar li{
+                width: auto;
+                float: none;
+            }
+            .navBar a{
+                text-align: left;
+            }
+        }
+        .main {
+            margin-left: 30%;
+            text-align: left;
+            padding: 30px;
+            background-color: #5cdb71;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .header {
+            background-color: #0a660e;
+            padding-left: 30%;
+        }
+
+        @media screen and (min-width: 750px) {
+            .header {
+                position: relative;
+                width: 70%;
+                margin-left: 30%;
+                box-sizing: border-box;
+            }
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0a660e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        img {
+            margin-right: 20px;
+            flex-shrink: 0;
+            width: 150px;
+            height: auto;
+        }
+
+        .main p {
+            flex-grow: 1;
+        }
+
+        @media screen and (max-width: 750px) {
+            .main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
-<body style = "background-color: #5cdb71">
+<body>
+<div class="header">
     <header>
         <h1>Stone Harris</h1>
-        <p>My Online Resume</p>
+<!--        <p>My Online Resume</p>-->
     </header>
-    <nav>
-        <ul style = "display:inline">
-            <li style = "display: inline; margin-right: 10px;"><a href="sth-resume.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Home</a></li>
-            <li style = "display: inline; margin-right: 10px;"><a href="education.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Education</a></li>
-            <li style = "display: inline; margin-right: 10px;"><a href="employment.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Employment</a></li>
-            <li style = "display: inline; margin-right: 10px;"><a href="achievements.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Achievements</a></li>
-            <li style = "display: inline; margin-right: 10px;"><a href="references.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">References</a></li>
-            <li style = "display: inline; margin-right: 10px;"><a href="documents.html" style="background-color: #4CAF50; color: white; padding: 10px; text-decoration: none; font-size: 18px; display: inline-block; width: 120px; text-align: center; border-radius: 5px;">Documents</a></li>
-        </ul>
-    </nav>
-    <main style="padding: 10px 20px; background-color: #4CAF50; margin-top: 20px; border-radius: 5px;">
+</div>
+
+<nav>
+    <ul class="navBar">
+        <li><a href="sth-resume.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="documents.html">Documents</a></li>
+    </ul>
+</nav>
+
+<div class="main">
+    <main>
         <h1>About me:</h1>
+        <img src="profpic.jpg" alt="pic">
         <p>My name is Stone Harris, and I am a versatile and dedicated full-stack engineer currently studying at Boston University with an expected Bachelor’s Degree in Computer Science by May 2024. My passion for technology and programming has been the driving force behind my varied experiences from developing crucial software for Nokia to crafting educational programs for young coders.
 
             With a keen ability to adapt to new programming languages and concepts, especially those oriented around object-oriented programming, I have built a robust skill set that includes Python, JavaScript, PHP, and an array of modern development tools and frameworks. My work at Julayo.org reflects my commitment to meaningful projects, where I helped build a platform for a nonprofit aiming to establish a healthcare center in Nigeria.
 
             As a team player and a natural problem-solver, I have contributed to a streamlined education curriculum as a Coding/STEM Instructor, and I have supported both students and staff as a Computer Support Specialist at Boston University, all while being actively involved in club baseball and outdoor activities. I invite you to explore my journey through technology and innovation.
         </p>
-        </main>
-    <footer>
-        <p>
-            &copy; All Rights Reserved by Stone Harris - <a href="credits.html" style="color: white">Credits</a>
-        </p>
-    </footer>
+    </main>
+</div>
+<footer>
+    <p>
+        &copy; All Rights Reserved by Stone Harris - <a href="credits.html">Credits</a>
+    </p>
+</footer>
+
 </body>
 </html>
