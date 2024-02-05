@@ -24,6 +24,12 @@
             float: left;
             width: 100%;
         }
+        img {
+            margin-right: 20px;
+            flex-shrink: 0;
+            width: 150px;
+            height: auto;
+        }
 
         @media screen and (min-width: 750px) {
             .navBar {
@@ -76,36 +82,45 @@
         }
         .main {
             margin-left: 30%;
-            text-align: left; /* Align text to the left for readability */
-            padding: 30px; /* Add padding to create space around the content */
+            text-align: left;
+            padding: 30px;
             background-color: #5cdb71;
         }
 
-        /* Optional: Customize list styles */
         .main ul {
-            padding-left: 20px; /* Adjust based on preference */
+            padding-left: 20px;
         }
 
         .main li {
-            margin-bottom: 10px; /* Space out list items for readability */
+            margin-bottom: 10px;
         }
 
-        /* Handle nested lists specifically */
         .main ul ul {
-            list-style-type: circle; /* Different style for nested lists */
-            padding-left: 30px; /* Additional indent for nested lists */
+            list-style-type: circle;
+            padding-left: 30px;
         }
         .header {
             background-color: #0a660e;
-            padding-left: 30%; /* Add padding on the left equal to the navbar width */
+            padding-left: 30%;
+        }
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .flex-container img {
+            margin-right: 20px;
+            width: 150px;
+            height: auto;
         }
 
         @media screen and (min-width: 750px) {
             .header {
-                position: relative; /* Ensures the header is positioned correctly */
-                width: 70%; /* Adjusts the width so it doesn't extend under the navbar */
-                margin-left: 30%; /* Pushes the header to start where the navbar ends */
-                box-sizing: border-box; /* Ensures padding is included in the width */
+                position: relative;
+                width: 70%;
+                margin-left: 30%;
+                box-sizing: border-box;
             }
         }
         footer {
@@ -142,33 +157,43 @@
 <div class="main">
     <main>
         <section>
-            <h2>Boston University | Boston, MA</h2>
-            <p>Expected May 2024</p>
-            <ul>
-                <li>Bachelor’s Degree in Computer Science</li>
-                <li>Club Involvement:</li>
-                <ul>
-                    <li>First Baseman for BU Club Baseball</li>
-                    <li>CGS Events Committee Director</li>
-                    <li>Outing Club</li>
-                </ul>
-            </ul>
+            <div class="flex-container">
+                <img src="bu.png" alt="Boston University logo">
+                <div>
+                    <h2>Boston University | Boston, MA</h2>
+                    <p>Expected May 2024</p>
+                    <ul>
+                        <li>Bachelor’s Degree in Computer Science</li>
+                        <li>Club Involvement:</li>
+                        <ul>
+                            <li>First Baseman for BU Club Baseball</li>
+                            <li>CGS Events Committee Director</li>
+                            <li>Outing Club</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section>
-            <h2>Wayland High School | Wayland, MA</h2>
-            <p>August 2016 - May 2020</p>
-            <ul>
-                <li>Club Involvement:</li>
-                <ul>
-                    <li>E-Board on Mentors in Violence Prevention</li>
-                    <li>Varsity Baseball (3 years)</li>
-                    <li>Varsity Track (2 years)</li>
-                    <li>Varsity Alpine Ski Racing (2 years)</li>
-                </ul>
-            </ul>
+            <div class="flex-container">
+                <img src="wayland.jpg" alt="Wayland High School logo">
+                <div>
+                    <h2>Wayland High School | Wayland, MA</h2>
+                    <p>August 2016 - May 2020</p>
+                    <ul>
+                        <li>Club Involvement:</li>
+                        <ul>
+                            <li>E-Board on Mentors in Violence Prevention</li>
+                            <li>Varsity Baseball (3 years)</li>
+                            <li>Varsity Track (2 years)</li>
+                            <li>Varsity Alpine Ski Racing (2 years)</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
         </section>
-
     </main>
+</div>
 </div>
 <footer>
     <p>

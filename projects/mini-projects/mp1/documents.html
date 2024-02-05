@@ -161,8 +161,47 @@
         }
         #result {
             margin-top: 20px;
-            font-size: 24px;
+            font-size: calc(1.5em + 0.5vw);
             font-weight: bold;
+            text-align: center;
+        }
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator label {
+            font-size: calc(1em + 0.5vw);
+        }
+        .calculator input[type="text"],
+        .calculator input[type="number"] {
+            width: calc(100% - 16px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: calc(1em + 0.5vw);
+        }
+
+        .calculator button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: calc(1em + 0.2vw);
+            margin-bottom: 10px;
+        }
+
+        .calculator button:hover {
+            background-color: #3e8e41;
         }
     </style>
 </head>
@@ -186,23 +225,22 @@
 </nav>
 
 <div class="main">
-    <p>This is an in-browser calculator:</p>
+    <div class ="calculator">
+        <p>This is an in-browser calculator:</p>
 
-    <label for="num1"> First Number </label><input id="num1">
-    <label for="num2"> Second Number </label><input id="num2">
-    <button onclick="calculator('+')">+</button>
-    <button onclick="calculator('-')">-</button>
-    <button onclick="calculator('/')">/</button>
-    <button onclick="calculator('*')">*</button>
-    <button onclick="calculator('**')">**</button>
+        <label for="num1"> First Number </label><input id="num1">
+        <label for="num2"> Second Number </label><input id="num2">
+        <button onclick="calculator('+')">+</button>
+        <button onclick="calculator('-')">-</button>
+        <button onclick="calculator('/')">/</button>
+        <button onclick="calculator('*')">*</button>
+        <button onclick="calculator('**')">**</button>
 
-    <h2 id="result"></h2>
-
+        <h2 id="result"></h2>
+    </div>
 </div>
 
 <script src="calc.js"></script>
 
 </body>
 </html>
-
-
