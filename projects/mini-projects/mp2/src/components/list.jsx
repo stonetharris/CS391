@@ -1,29 +1,30 @@
-// ... other imports
-import University from './university.jsx';
 import React, { useState, useEffect } from 'react';
+import User from './User';
 
 function List() {
-    const [universities, setUniversities] = useState([]);
+    const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        async function fetchData() {
-            const response = await fetch('http://universities.hipolabs.com/search?country=United+States');
+        const fetchUsers = async () => {
+            const response = await fetch('https://randomuser.me/api/?results=24');
             const data = await response.json();
-            setUniversities(data);
+            setUsers(data.results);
             setLoading(false);
-        }
-        fetchData();
+        };
+
+        fetchUsers();
     }, []);
 
     return (
         <div>
-            <h2>Universities</h2>
+            <h2>Users</h2>
             <div className='row'>
-                {loading ? <div>Loading...</div> : universities.map((uni) => <University key={uni.name} university={uni} />)}
+                {loading ? <div>Loading...</div> : users.map((user, index) => <User key={index} userData={user} />)}
             </div>
         </div>
     );
 }
 
 export default List;
+
