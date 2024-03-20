@@ -4,56 +4,60 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import Card from '../../components/Card';
 
-const QuestionDetailContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin: 5%;
+const DetailContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 5%;
 `;
 
-function QuestionDetail() {
+function CocktailDetail() {
     const router = useRouter();
     const { id } = router.query;
 
-    const [loading, setLoading] = useState(false);
-    const [question, setQuestion] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [cocktail, setCocktail] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
-            const data = await fetch(
-                `https://api.stackexchange.com/2.2/questions/${id}?site=stackoverflow`,
-            );
+            const res = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=rum');
+            const { drinks } = await res.json();
 
-            const result = await data.json();
-
-            if (result) {
-                setQuestion(result.items[0]);
-                setLoading(false);
-            }
+            const drink = drinks.find(drink => drink.idDrink === id);
+            setCocktail(drink);
+            setLoading(false);
         }
 
-        id && fetchData();
+        if (id) {
+            fetchData();
+        }
     }, [id]);
 
     return (
-        <QuestionDetailContainer>
+        <DetailContainer>
             {loading ? (
                 <span>Loading...</span>
             ) : (
                 <>
-                    <Head>
-                        <title>{question.title}</title>
-                    </Head>
+                    {cocktail ? (
+                        <>
+                            <Head>
+                                <title>{cocktail.strDrink}</title>
+                            </Head>
 
-                    <Card
-                        title={question.title}
-                        views={question.view_count}
-                        answers={question.answers_count}
-                    />
+                            <Card
+                                title={cocktail.strDrink}
+                                instructions={cocktail.strInstructions}
+                                image={cocktail.strDrinkThumb}
+                            />
+                        </>
+                    ) : (
+                        <span>Cocktail not found</span>
+                    )}
                 </>
             )}
-        </QuestionDetailContainer>
+        </DetailContainer>
     );
 }
 
-export default QuestionDetail;
+export default CocktailDetail;
