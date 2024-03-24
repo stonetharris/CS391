@@ -49,6 +49,11 @@ function CocktailDetail() {
                                 title={cocktail.strDrink}
                                 instructions={cocktail.strInstructions}
                                 image={cocktail.strDrinkThumb}
+                                category={cocktail.strCategory}
+                                alcoholic={cocktail.strAlcoholic}
+                                glass={cocktail.strGlass}
+                                ingredient1={cocktail.strIngredient1}
+                                ingredient2={cocktail.strIngredient2}
                             />
                         </>
                     ) : (
