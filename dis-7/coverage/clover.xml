@@ -45,7 +45,7 @@
       <line num="39" count="23" type="stmt"/>
       <line num="40" count="23" type="stmt"/>
     </file>
-    <file name="App.jsx" path="/Users/stoneharris/WebstormProjects/cs391/dis-7/src/App.jsx">
+    <file name="App.js" path="/Users/stoneharris/WebstormProjects/cs391/dis-7/src/App.js">
       <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
       <line num="2" count="0" type="stmt"/>
